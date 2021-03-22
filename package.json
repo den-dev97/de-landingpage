@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/den-dev97/de-landingpage/issues"
   },
-  "homepage": "https://github.com/den-dev97/de-landingpage#readme",
+  "homepage": "https://github.com/den-dev97/de-landingpage/index.html",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
