@@ -1,0 +1,79 @@
+.header-section {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(152,195,232,0.25) 100%);
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  position: relative;
+
+  &__logo {
+    position: absolute;
+    left: 83px;
+    top: 48px;
+  }
+
+  &__menu-btn {
+    position: absolute;
+    top: 56px;
+    right: 87px;
+    cursor: pointer;
+  }
+
+  &__menu-line {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: $blue;
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__info-block {
+    display: flex;
+  }
+
+  &__info-title {
+    max-width: 525px;
+    line-height: 74px;
+    color: $night-blue;
+    margin: 5.6rem 0 2rem;
+  }
+
+  &__info-description {
+    margin-bottom: 5.3rem;
+    max-width: 425px;
+  }
+
+  &__illustration {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 5.35%;
+    padding-bottom: 5.35%;
+    &__info-block {
+      display: block;
+    }
+  }
+
+  @media (max-width: $pre-mobile) {
+    &__info-block {
+      display: block;
+    }
+
+    &__info-title {
+      line-height: 44px;
+    }
+  }
+  @media (max-width: $mobile) {
+    &__info-description {
+      margin-bottom: 2rem;
+    }
+
+    &__info {
+      margin-bottom: 3rem;
+    }
+  }
+}

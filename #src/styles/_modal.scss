@@ -1,0 +1,138 @@
+.js-form.active .js-form__overlay,
+.js-form.active .js-form__window {
+  z-index: 2;
+  opacity: 1;
+}
+
+.js-form.active .js-form__window {
+  transform: translateY(100px);
+}
+
+.js-form.active .js-form__overlay {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.js-form__window, .js-form__overlay {
+  z-index: -1;
+  opacity: 0;
+}
+
+.js-form.hide .js-form__overlay,
+.js-form.hide .js-form__window {
+  z-index: 2;
+  opacity: 1;
+}
+
+.js-form.hide .js-form__window {
+  transform: translateY(-700px);
+}
+
+.js-form.hide .js-form__overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.js-form {
+  &__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .5s ease-in;
+  }
+
+  &__window, &__success {
+    width: 428px;
+    padding: 56px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    z-index: 3;
+    transform: translateY(-500px);
+    transition: transform .5s ease-in;
+  }
+
+  &__header-title {
+    color: $night-blue;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+
+  &__header-close {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+
+  &__body-label {
+    color: $night-blue;
+    opacity: 0.8;
+  }
+
+  &__body {
+    margin-bottom: 4rem;
+  }
+
+  &__body-field {
+    display: grid;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__body-input {
+    opacity: 0.4;
+    border: 1px solid $night-blue;
+    border-radius: 10px;
+    padding: 22px 42px;
+  }
+
+  #name {
+    text-transform: capitalize;
+  }
+
+  &__btn-container {
+    text-align: center;
+  }
+
+  &__btn {
+    display: block;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  .invalid {
+    color: $red;
+  }
+
+  &__body-error {
+    display: none;
+    color: $red;
+  }
+
+  &__success {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-800px);
+  }
+
+  @media (max-width: $mobile) {
+    &__window, &__success {
+      width: auto;
+      padding: 2rem;
+    }
+  }
+}

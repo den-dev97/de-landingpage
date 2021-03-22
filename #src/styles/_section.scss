@@ -1,0 +1,140 @@
+.section-client {
+  background-color: $light-blue;
+  color: #fff;
+  border-radius: 200px 0 0 0;
+  padding-top: 6rem;
+
+  &__container {
+    padding-bottom: 7.8125rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-bottom: 6.9375rem;
+  }
+
+  &__title {
+    max-width: 226px;
+    margin-right: 6.0625rem;
+    line-height: 2.875rem;
+  }
+
+  &__text {
+    max-width: 540px;
+    opacity: 0.6;
+  }
+
+  &__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-gap: 1px 1px;
+    background-color: rgba(255,255,255, .3);
+    text-align: center;
+    grid-template-areas:
+    "logo1 logo2 logo3 logo4"
+    "logo5 logo6 logo7 logo8";
+  }
+
+  .logo1 {
+    grid-area: logo1;
+  }
+
+  .logo2 {
+    grid-area: logo2;
+  }
+
+  .logo3 {
+    grid-area: logo3;
+  }
+
+  .logo4 {
+    grid-area: logo4;
+  }
+
+  .logo5 {
+    grid-area: logo5;
+  }
+
+  .logo6 {
+    grid-area: logo6;
+  }
+
+  .logo7 {
+    grid-area: logo7;
+  }
+
+  .logo8 {
+    grid-area: logo8;
+    background-color: rgba(31, 63, 104, .4);
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+
+  &__item {
+    padding: 43px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    background-color: $light-blue;
+    transition-duration: .5s;
+
+    &:hover {
+      background-color: rgba(31, 63, 104, .4);
+    }
+  }
+  
+  @media (max-width: $low-screen) {
+    &__container {
+      padding-bottom: 6%;
+    }
+
+    &__wrapper {
+      justify-content: center;
+    }
+
+    &__title {
+      margin-right: 2rem;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &__wrapper {
+      display: block;
+      width: fit-content;
+      margin-left: 1.5rem;
+      padding-bottom: 2rem;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__item {
+      line-height: normal;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: $pre-mobile) {
+    &__wrapper {
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &__table {
+      display: flex;
+      overflow-x: auto ;
+    }
+
+    &__title {
+      margin-right: 0;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}

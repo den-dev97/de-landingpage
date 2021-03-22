@@ -1,0 +1,117 @@
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: .05em;
+  line-height: 1.625rem;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Gilroy, sans-serif;
+  color: $blue;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $night-blue;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $light-blue;
+  }
+}
+
+h1 {
+  font-size: 64px;
+  font-family: Galien, sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.btn {
+  text-decoration: none;
+  padding: .9rem 3rem;
+  background-color: $light-blue;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: .04em;
+  height: fit-content;
+}
+
+section, header, main, footer {
+  padding: 0 1rem;
+}
+
+@media (max-width: $pre-mobile) {
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  body {
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: $mobile) {
+  section, header, main, footer {
+    padding: 0 calc(50vw - 270px);
+  }
+}
+
+@media (min-width: $pre-mobile) {
+  section, header, main, footer {
+    padding: 0 calc(50vw - 360px);
+  }
+}
+
+@media (min-width: $tablet) {
+  section, header, main, footer {
+    padding: 0 calc(50vw - 480px);
+  }
+}
+
+@media (min-width: $low-screen) {
+  section, header, main, footer {
+    padding: 0 calc(50vw - 590px);
+  }
+}
+
+@import "header";
+@import "main";
+@import "section";
+@import "footer";
+@import "modal";
